@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F3CF26F921988F3D00E23A0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CF26F821988F3D00E23A0A /* AppDelegate.swift */; };
-		F3CF26FB21988F3D00E23A0A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CF26FA21988F3D00E23A0A /* ViewController.swift */; };
+		F3CF26FB21988F3D00E23A0A /* ATNLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CF26FA21988F3D00E23A0A /* ATNLoginViewController.swift */; };
 		F3CF26FE21988F3D00E23A0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3CF26FC21988F3D00E23A0A /* Main.storyboard */; };
 		F3CF270121988F3D00E23A0A /* PoloniexTicker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F3CF26FF21988F3D00E23A0A /* PoloniexTicker.xcdatamodeld */; };
 		F3CF270321988F4100E23A0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3CF270221988F4100E23A0A /* Assets.xcassets */; };
@@ -37,7 +37,7 @@
 /* Begin PBXFileReference section */
 		F3CF26F521988F3D00E23A0A /* PoloniexTicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PoloniexTicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3CF26F821988F3D00E23A0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F3CF26FA21988F3D00E23A0A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F3CF26FA21988F3D00E23A0A /* ATNLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATNLoginViewController.swift; sourceTree = "<group>"; };
 		F3CF26FD21988F3D00E23A0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F3CF270021988F3D00E23A0A /* PoloniexTicker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PoloniexTicker.xcdatamodel; sourceTree = "<group>"; };
 		F3CF270221988F4100E23A0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -100,7 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				F3CF26F821988F3D00E23A0A /* AppDelegate.swift */,
-				F3CF26FA21988F3D00E23A0A /* ViewController.swift */,
+				F3CF26FA21988F3D00E23A0A /* ATNLoginViewController.swift */,
 				F3CF26FC21988F3D00E23A0A /* Main.storyboard */,
 				F3CF270221988F4100E23A0A /* Assets.xcassets */,
 				F3CF270421988F4100E23A0A /* LaunchScreen.storyboard */,
@@ -260,7 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3CF270121988F3D00E23A0A /* PoloniexTicker.xcdatamodeld in Sources */,
-				F3CF26FB21988F3D00E23A0A /* ViewController.swift in Sources */,
+				F3CF26FB21988F3D00E23A0A /* ATNLoginViewController.swift in Sources */,
 				F3CF26F921988F3D00E23A0A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
