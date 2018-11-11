@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06656A6A4AF403C257E95F08 /* Pods_PoloniexTicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 605F2B120358510214A050E8 /* Pods_PoloniexTicker.framework */; };
+		294BDBBDA23DBCEA6563D297 /* Pods_PoloniexTickerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE8D967B4DBE77DA1C687EB9 /* Pods_PoloniexTickerTests.framework */; };
+		AE2D75A9709BEE35243F8B59 /* Pods_PoloniexTickerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 765F5C24A0C634DC10D03BCB /* Pods_PoloniexTickerUITests.framework */; };
 		F3CF26F921988F3D00E23A0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CF26F821988F3D00E23A0A /* AppDelegate.swift */; };
 		F3CF26FB21988F3D00E23A0A /* ATNLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CF26FA21988F3D00E23A0A /* ATNLoginViewController.swift */; };
 		F3CF26FE21988F3D00E23A0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3CF26FC21988F3D00E23A0A /* Main.storyboard */; };
@@ -15,6 +18,7 @@
 		F3CF270621988F4100E23A0A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3CF270421988F4100E23A0A /* LaunchScreen.storyboard */; };
 		F3CF271121988F4100E23A0A /* PoloniexTickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CF271021988F4100E23A0A /* PoloniexTickerTests.swift */; };
 		F3CF271C21988F4100E23A0A /* PoloniexTickerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CF271B21988F4100E23A0A /* PoloniexTickerUITests.swift */; };
+		F3CF272B219896EF00E23A0A /* ATNAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CF272A219896EF00E23A0A /* ATNAPIManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +39,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		046317D359E6817AE3055D25 /* Pods-PoloniexTicker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoloniexTicker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PoloniexTicker/Pods-PoloniexTicker.debug.xcconfig"; sourceTree = "<group>"; };
+		0885B608DA233F0512D1CB0D /* Pods-PoloniexTickerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoloniexTickerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PoloniexTickerUITests/Pods-PoloniexTickerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		398B857DA46A35DA71DB8FBA /* Pods-PoloniexTickerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoloniexTickerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PoloniexTickerUITests/Pods-PoloniexTickerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		5538E0E11362C6A6C85CDB49 /* Pods-PoloniexTickerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoloniexTickerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PoloniexTickerTests/Pods-PoloniexTickerTests.release.xcconfig"; sourceTree = "<group>"; };
+		5A722FFDB9E06E365257A299 /* Pods-PoloniexTickerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoloniexTickerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PoloniexTickerTests/Pods-PoloniexTickerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		605F2B120358510214A050E8 /* Pods_PoloniexTicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoloniexTicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		765F5C24A0C634DC10D03BCB /* Pods_PoloniexTickerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoloniexTickerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB43CECCDF22B38C2B6AA1E6 /* Pods-PoloniexTicker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoloniexTicker.release.xcconfig"; path = "Pods/Target Support Files/Pods-PoloniexTicker/Pods-PoloniexTicker.release.xcconfig"; sourceTree = "<group>"; };
+		EE8D967B4DBE77DA1C687EB9 /* Pods_PoloniexTickerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoloniexTickerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3CF26F521988F3D00E23A0A /* PoloniexTicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PoloniexTicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3CF26F821988F3D00E23A0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3CF26FA21988F3D00E23A0A /* ATNLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATNLoginViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +62,7 @@
 		F3CF271721988F4100E23A0A /* PoloniexTickerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PoloniexTickerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3CF271B21988F4100E23A0A /* PoloniexTickerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoloniexTickerUITests.swift; sourceTree = "<group>"; };
 		F3CF271D21988F4100E23A0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3CF272A219896EF00E23A0A /* ATNAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATNAPIManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06656A6A4AF403C257E95F08 /* Pods_PoloniexTicker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				294BDBBDA23DBCEA6563D297 /* Pods_PoloniexTickerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +86,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE2D75A9709BEE35243F8B59 /* Pods_PoloniexTickerUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A9E19999CF48B39C986E5C1B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				605F2B120358510214A050E8 /* Pods_PoloniexTicker.framework */,
+				EE8D967B4DBE77DA1C687EB9 /* Pods_PoloniexTickerTests.framework */,
+				765F5C24A0C634DC10D03BCB /* Pods_PoloniexTickerUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D87F0F5DB734BCD9C59FAF12 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				046317D359E6817AE3055D25 /* Pods-PoloniexTicker.debug.xcconfig */,
+				BB43CECCDF22B38C2B6AA1E6 /* Pods-PoloniexTicker.release.xcconfig */,
+				5A722FFDB9E06E365257A299 /* Pods-PoloniexTickerTests.debug.xcconfig */,
+				5538E0E11362C6A6C85CDB49 /* Pods-PoloniexTickerTests.release.xcconfig */,
+				398B857DA46A35DA71DB8FBA /* Pods-PoloniexTickerUITests.debug.xcconfig */,
+				0885B608DA233F0512D1CB0D /* Pods-PoloniexTickerUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F3CF26EC21988F3D00E23A0A = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +123,8 @@
 				F3CF270F21988F4100E23A0A /* PoloniexTickerTests */,
 				F3CF271A21988F4100E23A0A /* PoloniexTickerUITests */,
 				F3CF26F621988F3D00E23A0A /* Products */,
+				D87F0F5DB734BCD9C59FAF12 /* Pods */,
+				A9E19999CF48B39C986E5C1B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +141,7 @@
 		F3CF26F721988F3D00E23A0A /* PoloniexTicker */ = {
 			isa = PBXGroup;
 			children = (
+				F3CF27292198969B00E23A0A /* API */,
 				F3CF26F821988F3D00E23A0A /* AppDelegate.swift */,
 				F3CF26FA21988F3D00E23A0A /* ATNLoginViewController.swift */,
 				F3CF26FC21988F3D00E23A0A /* Main.storyboard */,
@@ -128,6 +171,14 @@
 			path = PoloniexTickerUITests;
 			sourceTree = "<group>";
 		};
+		F3CF27292198969B00E23A0A /* API */ = {
+			isa = PBXGroup;
+			children = (
+				F3CF272A219896EF00E23A0A /* ATNAPIManager.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +186,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F3CF272021988F4100E23A0A /* Build configuration list for PBXNativeTarget "PoloniexTicker" */;
 			buildPhases = (
+				2AB6F19B403CECF454E4CECD /* [CP] Check Pods Manifest.lock */,
 				F3CF26F121988F3D00E23A0A /* Sources */,
 				F3CF26F221988F3D00E23A0A /* Frameworks */,
 				F3CF26F321988F3D00E23A0A /* Resources */,
+				C133046B4B7FE7AD9138CC4C /* [CP] Embed Pods Frameworks */,
+				1F667D594A3614B976CAB72A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,9 +206,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F3CF272321988F4100E23A0A /* Build configuration list for PBXNativeTarget "PoloniexTickerTests" */;
 			buildPhases = (
+				797154211A835C5CD5875FEE /* [CP] Check Pods Manifest.lock */,
 				F3CF270821988F4100E23A0A /* Sources */,
 				F3CF270921988F4100E23A0A /* Frameworks */,
 				F3CF270A21988F4100E23A0A /* Resources */,
+				E57D55D116AEC935D7F17F44 /* [CP] Embed Pods Frameworks */,
+				4AA390D3F335F7A81C09F463 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -170,9 +227,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F3CF272621988F4100E23A0A /* Build configuration list for PBXNativeTarget "PoloniexTickerUITests" */;
 			buildPhases = (
+				5DB6C1F33913F182E3718765 /* [CP] Check Pods Manifest.lock */,
 				F3CF271321988F4100E23A0A /* Sources */,
 				F3CF271421988F4100E23A0A /* Frameworks */,
 				F3CF271521988F4100E23A0A /* Resources */,
+				7DFD518E979CB0F18CD48AAB /* [CP] Embed Pods Frameworks */,
+				46A5A9E14CAC9EB4C35FE8A1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -254,6 +314,156 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1F667D594A3614B976CAB72A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PoloniexTicker/Pods-PoloniexTicker-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2AB6F19B403CECF454E4CECD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PoloniexTicker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		46A5A9E14CAC9EB4C35FE8A1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PoloniexTickerUITests/Pods-PoloniexTickerUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4AA390D3F335F7A81C09F463 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PoloniexTickerTests/Pods-PoloniexTickerTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5DB6C1F33913F182E3718765 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PoloniexTickerUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		797154211A835C5CD5875FEE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PoloniexTickerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7DFD518E979CB0F18CD48AAB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PoloniexTickerUITests/Pods-PoloniexTickerUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C133046B4B7FE7AD9138CC4C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-PoloniexTicker/Pods-PoloniexTicker-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PoloniexTicker/Pods-PoloniexTicker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E57D55D116AEC935D7F17F44 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PoloniexTickerTests/Pods-PoloniexTickerTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F3CF26F121988F3D00E23A0A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -261,6 +471,7 @@
 			files = (
 				F3CF270121988F3D00E23A0A /* PoloniexTicker.xcdatamodeld in Sources */,
 				F3CF26FB21988F3D00E23A0A /* ATNLoginViewController.swift in Sources */,
+				F3CF272B219896EF00E23A0A /* ATNAPIManager.swift in Sources */,
 				F3CF26F921988F3D00E23A0A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -434,15 +645,13 @@
 		};
 		F3CF272121988F4100E23A0A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 046317D359E6817AE3055D25 /* Pods-PoloniexTicker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z7T88Q64U2;
 				INFOPLIST_FILE = PoloniexTicker/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.inabarawy.PoloniexTicker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -452,15 +661,13 @@
 		};
 		F3CF272221988F4100E23A0A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB43CECCDF22B38C2B6AA1E6 /* Pods-PoloniexTicker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z7T88Q64U2;
 				INFOPLIST_FILE = PoloniexTicker/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.inabarawy.PoloniexTicker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -470,17 +677,14 @@
 		};
 		F3CF272421988F4100E23A0A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A722FFDB9E06E365257A299 /* Pods-PoloniexTickerTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z7T88Q64U2;
 				INFOPLIST_FILE = PoloniexTickerTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.inabarawy.PoloniexTickerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -491,17 +695,14 @@
 		};
 		F3CF272521988F4100E23A0A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5538E0E11362C6A6C85CDB49 /* Pods-PoloniexTickerTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z7T88Q64U2;
 				INFOPLIST_FILE = PoloniexTickerTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.inabarawy.PoloniexTickerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -512,16 +713,13 @@
 		};
 		F3CF272721988F4100E23A0A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 398B857DA46A35DA71DB8FBA /* Pods-PoloniexTickerUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z7T88Q64U2;
 				INFOPLIST_FILE = PoloniexTickerUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.inabarawy.PoloniexTickerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -532,16 +730,13 @@
 		};
 		F3CF272821988F4100E23A0A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0885B608DA233F0512D1CB0D /* Pods-PoloniexTickerUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z7T88Q64U2;
 				INFOPLIST_FILE = PoloniexTickerUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.inabarawy.PoloniexTickerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
