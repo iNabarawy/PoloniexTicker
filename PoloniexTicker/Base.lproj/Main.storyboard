@@ -33,6 +33,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="110" y="134"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="pnM-pS-OUf">
@@ -157,23 +158,46 @@
                                     <outlet property="delegate" destination="NRj-nk-pka" id="1DL-ZX-wN4"/>
                                 </connections>
                             </tableView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="nUY-1X-Fyq">
+                                <rect key="frame" x="142" y="20" width="91" height="29"/>
+                                <segments>
+                                    <segment title="Light"/>
+                                    <segment title="Dark"/>
+                                </segments>
+                                <connections>
+                                    <action selector="switchThemes:" destination="NRj-nk-pka" eventType="valueChanged" id="9C3-mN-ISQ"/>
+                                </connections>
+                            </segmentedControl>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YYx-c6-aiy">
+                                <rect key="frame" x="16" y="59" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="DOs-ho-A8T" firstAttribute="trailing" secondItem="YYx-c6-aiy" secondAttribute="trailing" constant="16" id="1LZ-il-5O5"/>
                             <constraint firstItem="5Rq-H7-gKy" firstAttribute="leading" secondItem="DOs-ho-A8T" secondAttribute="leading" id="C3C-TB-LJ9"/>
                             <constraint firstItem="DOs-ho-A8T" firstAttribute="trailing" secondItem="5Rq-H7-gKy" secondAttribute="trailing" id="JtY-TT-mEx"/>
+                            <constraint firstItem="YYx-c6-aiy" firstAttribute="leading" secondItem="DOs-ho-A8T" secondAttribute="leading" constant="16" id="NMt-ha-DBH"/>
                             <constraint firstItem="5Rq-H7-gKy" firstAttribute="top" secondItem="DOs-ho-A8T" secondAttribute="top" constant="77" id="PZz-xg-gnr"/>
+                            <constraint firstItem="YYx-c6-aiy" firstAttribute="top" secondItem="nUY-1X-Fyq" secondAttribute="bottom" constant="11" id="VVz-tq-0zF"/>
                             <constraint firstItem="DOs-ho-A8T" firstAttribute="bottom" secondItem="5Rq-H7-gKy" secondAttribute="bottom" id="Z5d-mR-2Bw"/>
+                            <constraint firstItem="nUY-1X-Fyq" firstAttribute="top" secondItem="DOs-ho-A8T" secondAttribute="top" id="uLl-g5-kIZ"/>
+                            <constraint firstItem="nUY-1X-Fyq" firstAttribute="centerX" secondItem="DOs-ho-A8T" secondAttribute="centerX" id="yfF-RW-Usw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DOs-ho-A8T"/>
                     </view>
                     <connections>
+                        <outlet property="inputTextFields" destination="YYx-c6-aiy" id="dPG-Tr-lVx"/>
+                        <outlet property="segmentedController" destination="nUY-1X-Fyq" id="8qg-Hc-MlX"/>
                         <outlet property="tableView" destination="5Rq-H7-gKy" id="eTz-JJ-8w6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SXm-FH-FWj" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="828" y="134"/>
+            <point key="canvasLocation" x="828" y="133.5832083958021"/>
         </scene>
     </scenes>
 </document>

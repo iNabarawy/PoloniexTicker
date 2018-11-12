@@ -7,7 +7,7 @@
 //
 
 import Foundation
-struct Ticker {
+struct Tick {
 	var id: Int
 	var last: String?
 	var lowestAsk: String?
@@ -20,6 +20,6 @@ struct Ticker {
 	var low24hr: String?
 	
 	func currency()-> String {
-		return ATNCurrencyHelper.shared.currencyNameForID(id:self.id)
+		return ATNCurrencyHelper.shared.currencyPairNameForID(id:self.id)
 	}
 }

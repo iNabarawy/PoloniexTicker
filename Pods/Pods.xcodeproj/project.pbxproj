@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -36,7 +36,7 @@
 
 /* Begin PBXFileReference section */
 		0A15FA3EF7CFA06A7883A85603850C5F /* Pods-PoloniexTicker-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PoloniexTicker-resources.sh"; sourceTree = "<group>"; };
-		0F54A0B97358F9B52DBCF6CEDDF0D41E /* Pods_PoloniexTickerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PoloniexTickerUITests.framework; path = "Pods-PoloniexTickerUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F54A0B97358F9B52DBCF6CEDDF0D41E /* Pods_PoloniexTickerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoloniexTickerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1661B72F0A274473D9147AAE8A3E06F1 /* Starscream-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Starscream-dummy.m"; sourceTree = "<group>"; };
 		198E6C68037FBE44BC8065FCE5FA12F7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1BE6939FDA94107EE916BCB150F9945E /* Pods-PoloniexTickerUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PoloniexTickerUITests-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -47,14 +47,14 @@
 		3BF3A2455E5558665CDE37EDB82E1DC9 /* Pods-PoloniexTickerTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PoloniexTickerTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		3BF79A3A1C6FEF108CF16DE0537B0431 /* WebSocket.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WebSocket.swift; path = Sources/WebSocket.swift; sourceTree = "<group>"; };
 		402E9C4EDCC8FAB6C413FDA133B44343 /* Pods-PoloniexTickerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PoloniexTickerUITests.release.xcconfig"; sourceTree = "<group>"; };
-		403A1955BFC2A3506C099206859A5A90 /* Pods_PoloniexTickerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PoloniexTickerTests.framework; path = "Pods-PoloniexTickerTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		403A1955BFC2A3506C099206859A5A90 /* Pods_PoloniexTickerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoloniexTickerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		42FF1A562400C301A41FEF3906F465A8 /* Pods-PoloniexTicker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-PoloniexTicker.modulemap"; sourceTree = "<group>"; };
 		4509585F0DDE4C956FE28176C64B1580 /* Pods-PoloniexTickerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PoloniexTickerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4CD4144F4CE9034227CD1348DBE26179 /* Pods-PoloniexTickerTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-PoloniexTickerTests.modulemap"; sourceTree = "<group>"; };
-		5040552DA6E2A603EB769496C979EBED /* Pods_PoloniexTicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PoloniexTicker.framework; path = "Pods-PoloniexTicker.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5040552DA6E2A603EB769496C979EBED /* Pods_PoloniexTicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoloniexTicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		543448D63B01C2A31E87229AF787B8D4 /* Pods-PoloniexTickerTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PoloniexTickerTests-frameworks.sh"; sourceTree = "<group>"; };
 		549374B82525BC06481F537757AD3384 /* Pods-PoloniexTickerTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PoloniexTickerTests-resources.sh"; sourceTree = "<group>"; };
-		5B43BA9EFEBBA23F507A045D26FF389C /* Starscream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Starscream.framework; path = Starscream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B43BA9EFEBBA23F507A045D26FF389C /* Starscream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Starscream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		6BE63D81FB6D3427FD0C53FA6362293E /* Pods-PoloniexTickerUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PoloniexTickerUITests-resources.sh"; sourceTree = "<group>"; };
 		7B8F755169E880F3B5895BFB4BBDCCE3 /* Pods-PoloniexTickerTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PoloniexTickerTests-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -65,7 +65,7 @@
 		88E88059046FDA35E839845B5BB7E5BF /* Pods-PoloniexTickerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PoloniexTickerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8A04D8C3C1516E1A02A46FCEB72236FA /* Compression.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Compression.swift; path = Sources/Compression.swift; sourceTree = "<group>"; };
 		8CD5F1B26EA9B644A8D0E9B3B3A10A33 /* Pods-PoloniexTickerUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-PoloniexTickerUITests.modulemap"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9530793761869AFBF8F902DBA5F0AD3C /* Pods-PoloniexTicker-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PoloniexTicker-acknowledgements.markdown"; sourceTree = "<group>"; };
 		959AC60F0D596DE61EEE71FBD435C137 /* Pods-PoloniexTickerUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PoloniexTickerUITests-frameworks.sh"; sourceTree = "<group>"; };
 		9728DE43CB0290ABA320A08027EEC0F0 /* Pods-PoloniexTickerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PoloniexTickerTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -228,7 +228,6 @@
 				3BF79A3A1C6FEF108CF16DE0537B0431 /* WebSocket.swift */,
 				E54986408F60ECB036498154E2A5488B /* Support Files */,
 			);
-			name = Starscream;
 			path = Starscream;
 			sourceTree = "<group>";
 		};
@@ -368,7 +367,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1010;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -524,6 +523,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;

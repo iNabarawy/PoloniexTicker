@@ -125,7 +125,7 @@ class ATNCurrencyHelper {
         237:"USDC_BCHABC",
         239:"USDC_BCHSV"
     ]
-     func currencyNameForID(id:Int) -> String {
+     func currencyPairNameForID(id:Int) -> String {
         return self.currencyIDPair[id] ?? "N/A"
     }
 }
