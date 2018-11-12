@@ -18,7 +18,11 @@
 		F3CF270621988F4100E23A0A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3CF270421988F4100E23A0A /* LaunchScreen.storyboard */; };
 		F3CF271121988F4100E23A0A /* PoloniexTickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CF271021988F4100E23A0A /* PoloniexTickerTests.swift */; };
 		F3CF271C21988F4100E23A0A /* PoloniexTickerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CF271B21988F4100E23A0A /* PoloniexTickerUITests.swift */; };
-		F3CF272B219896EF00E23A0A /* ATNAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CF272A219896EF00E23A0A /* ATNAPIManager.swift */; };
+		F3CF272E2198A18200E23A0A /* Ticker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CF272D2198A18200E23A0A /* Ticker.swift */; };
+		F3CF27302199C56E00E23A0A /* ATNCurrencyHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CF272F2199C56E00E23A0A /* ATNCurrencyHelper.swift */; };
+		F3CF27332199C57600E23A0A /* ATNTickerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CF27322199C57600E23A0A /* ATNTickerTableViewCell.swift */; };
+		F3CF27352199C59300E23A0A /* ATNBitPoloniexService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CF27342199C59300E23A0A /* ATNBitPoloniexService.swift */; };
+		F3CF27382199C5CB00E23A0A /* ATNHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CF27372199C5CB00E23A0A /* ATNHomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,7 +66,11 @@
 		F3CF271721988F4100E23A0A /* PoloniexTickerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PoloniexTickerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3CF271B21988F4100E23A0A /* PoloniexTickerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoloniexTickerUITests.swift; sourceTree = "<group>"; };
 		F3CF271D21988F4100E23A0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F3CF272A219896EF00E23A0A /* ATNAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATNAPIManager.swift; sourceTree = "<group>"; };
+		F3CF272D2198A18200E23A0A /* Ticker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticker.swift; sourceTree = "<group>"; };
+		F3CF272F2199C56E00E23A0A /* ATNCurrencyHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATNCurrencyHelper.swift; sourceTree = "<group>"; };
+		F3CF27322199C57600E23A0A /* ATNTickerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATNTickerTableViewCell.swift; sourceTree = "<group>"; };
+		F3CF27342199C59300E23A0A /* ATNBitPoloniexService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATNBitPoloniexService.swift; sourceTree = "<group>"; };
+		F3CF27372199C5CB00E23A0A /* ATNHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATNHomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,14 +149,16 @@
 		F3CF26F721988F3D00E23A0A /* PoloniexTicker */ = {
 			isa = PBXGroup;
 			children = (
+				F3CF27312199C57600E23A0A /* CustomViews */,
+				F3CF272C2198A17300E23A0A /* Model */,
 				F3CF27292198969B00E23A0A /* API */,
-				F3CF26F821988F3D00E23A0A /* AppDelegate.swift */,
-				F3CF26FA21988F3D00E23A0A /* ATNLoginViewController.swift */,
+				F3CF27362199C5AE00E23A0A /* ViewController */,
 				F3CF26FC21988F3D00E23A0A /* Main.storyboard */,
 				F3CF270221988F4100E23A0A /* Assets.xcassets */,
 				F3CF270421988F4100E23A0A /* LaunchScreen.storyboard */,
 				F3CF270721988F4100E23A0A /* Info.plist */,
 				F3CF26FF21988F3D00E23A0A /* PoloniexTicker.xcdatamodeld */,
+				F3CF26F821988F3D00E23A0A /* AppDelegate.swift */,
 			);
 			path = PoloniexTicker;
 			sourceTree = "<group>";
@@ -174,9 +184,35 @@
 		F3CF27292198969B00E23A0A /* API */ = {
 			isa = PBXGroup;
 			children = (
-				F3CF272A219896EF00E23A0A /* ATNAPIManager.swift */,
+				F3CF27342199C59300E23A0A /* ATNBitPoloniexService.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		F3CF272C2198A17300E23A0A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F3CF272F2199C56E00E23A0A /* ATNCurrencyHelper.swift */,
+				F3CF272D2198A18200E23A0A /* Ticker.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F3CF27312199C57600E23A0A /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				F3CF27322199C57600E23A0A /* ATNTickerTableViewCell.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		F3CF27362199C5AE00E23A0A /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F3CF27372199C5CB00E23A0A /* ATNHomeViewController.swift */,
+				F3CF26FA21988F3D00E23A0A /* ATNLoginViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -471,7 +507,11 @@
 			files = (
 				F3CF270121988F3D00E23A0A /* PoloniexTicker.xcdatamodeld in Sources */,
 				F3CF26FB21988F3D00E23A0A /* ATNLoginViewController.swift in Sources */,
-				F3CF272B219896EF00E23A0A /* ATNAPIManager.swift in Sources */,
+				F3CF272E2198A18200E23A0A /* Ticker.swift in Sources */,
+				F3CF27382199C5CB00E23A0A /* ATNHomeViewController.swift in Sources */,
+				F3CF27332199C57600E23A0A /* ATNTickerTableViewCell.swift in Sources */,
+				F3CF27352199C59300E23A0A /* ATNBitPoloniexService.swift in Sources */,
+				F3CF27302199C56E00E23A0A /* ATNCurrencyHelper.swift in Sources */,
 				F3CF26F921988F3D00E23A0A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -651,7 +691,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z7T88Q64U2;
 				INFOPLIST_FILE = PoloniexTicker/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.inabarawy.PoloniexTicker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -667,7 +710,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z7T88Q64U2;
 				INFOPLIST_FILE = PoloniexTicker/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.inabarawy.PoloniexTicker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -684,7 +730,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z7T88Q64U2;
 				INFOPLIST_FILE = PoloniexTickerTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.inabarawy.PoloniexTickerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -702,7 +752,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z7T88Q64U2;
 				INFOPLIST_FILE = PoloniexTickerTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.inabarawy.PoloniexTickerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -719,7 +773,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z7T88Q64U2;
 				INFOPLIST_FILE = PoloniexTickerUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.inabarawy.PoloniexTickerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -736,7 +794,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z7T88Q64U2;
 				INFOPLIST_FILE = PoloniexTickerUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.inabarawy.PoloniexTickerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;

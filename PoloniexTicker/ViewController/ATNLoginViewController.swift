@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ATNLoginViewController.swift
 //  PoloniexTicker
 //
 //  Created by Ahmed T.Nabarawy on 11/11/18.
