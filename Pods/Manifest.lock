@@ -1,12 +1,15 @@
 PODS:
+  - KeychainAccess (3.1.0)
   - Starscream (3.0.4)
 
 DEPENDENCIES:
+  - KeychainAccess
   - Starscream (~> 3.0.2)
 
 SPEC CHECKSUMS:
+  KeychainAccess: 94c5540b32eabf7bc32bfb976a268e8ea05fd6da
   Starscream: f5da93fe6984c77b694366bf7299b7dc63a76f26
 
-PODFILE CHECKSUM: abd486d73e6e6d3e22f24ec18b8e60654d673d10
+PODFILE CHECKSUM: 585c6ec9fc9b181873e35a23f6bae551b042d297
 
 COCOAPODS: 1.4.0

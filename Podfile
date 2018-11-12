@@ -8,6 +8,7 @@ platform :ios, '9.0'
 use_frameworks!
 
 pod 'Starscream', '~> 3.0.2'
+pod 'KeychainAccess'
 
   # Pods for PoloniexTicker
 

@@ -11,7 +11,7 @@
 import UIKit
 
 class ATNHomeViewController: UIViewController {
-	var ticks = [Tick]()
+	var ticks = [Int:Tick]()
 	var currentTheme: ATNTheme? {
 		didSet{
 			updateView()
@@ -20,7 +20,7 @@ class ATNHomeViewController: UIViewController {
 	
     @IBOutlet weak var tableView: UITableView!
 	@IBOutlet weak var segmentedController: UISegmentedControl!
-	@IBOutlet weak var inputTextFields: UITextField!
+	@IBOutlet weak var inputTextField: UITextField!
 	
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +33,13 @@ class ATNHomeViewController: UIViewController {
 		tableView.reloadData()
 		segmentedController.backgroundColor = currentTheme?.backgroundColor
 		segmentedController.tintColor = currentTheme?.foregroundColor
+		
+		inputTextField.backgroundColor = currentTheme?.backgroundColor
+		inputTextField.textColor = currentTheme?.foregroundColor
+		inputTextField.layer.borderColor = currentTheme?.foregroundColor?.cgColor
+		inputTextField.layer.borderWidth = 1
+		inputTextField.layer.cornerRadius = 5
+		
 		view.backgroundColor = currentTheme?.backgroundColor
 	}
 
@@ -58,7 +65,7 @@ extension ATNHomeViewController : UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as? ATNTickerTableViewCell
-        let tick = ticks[indexPath.row]
+		let tick = Array(ticks.values).sorted{$0.id<$1.id}[indexPath.row]
 		cell?.configure(with: tick, theme: currentTheme)
         return cell!
     }
@@ -73,8 +80,31 @@ extension ATNHomeViewController : ATNBitPoloniexServiceObserverProtocol {
 	}
 	
 	func receivedUpdates(_ tick: Tick) {
-		self.ticks.insert(tick, at: 0)
-		self.tableView.reloadData()
-		print("Ticker \(tick)")
+		if (ticks[tick.id] != nil){
+			let arrayOfTicks = Array(ticks.values).sorted{$0.id<$1.id}
+			var index = 0
+			for i in arrayOfTicks {
+				if i.id == tick.id {
+					break
+				}
+				index = index + 1
+			}
+			ticks[tick.id] = tick
+			let indexPath = IndexPath(row: index, section: 0)
+			if tableView.indexPathsForVisibleRows?.contains(indexPath) ?? false {
+				self.tableView.reloadRows(at: [indexPath], with: .fade)
+			}
+		}else{
+			ticks[tick.id] = tick
+			self.tableView.reloadData()
+		}
+	}
+	
+}
+
+extension ATNHomeViewController : UITextFieldDelegate {
+	func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+		textField.resignFirstResponder()
+		return true
 	}
 }

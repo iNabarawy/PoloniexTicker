@@ -10,6 +10,8 @@
 		06656A6A4AF403C257E95F08 /* Pods_PoloniexTicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 605F2B120358510214A050E8 /* Pods_PoloniexTicker.framework */; };
 		294BDBBDA23DBCEA6563D297 /* Pods_PoloniexTickerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE8D967B4DBE77DA1C687EB9 /* Pods_PoloniexTickerTests.framework */; };
 		AE2D75A9709BEE35243F8B59 /* Pods_PoloniexTickerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 765F5C24A0C634DC10D03BCB /* Pods_PoloniexTickerUITests.framework */; };
+		F34B03172199F342002760AD /* ATNRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34B03162199F342002760AD /* ATNRegistrationViewController.swift */; };
+		F34B031A219A02CD002760AD /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F34B0319219A02CD002760AD /* AuthenticationServices.framework */; };
 		F3CF26F921988F3D00E23A0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CF26F821988F3D00E23A0A /* AppDelegate.swift */; };
 		F3CF26FB21988F3D00E23A0A /* ATNLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CF26FA21988F3D00E23A0A /* ATNLoginViewController.swift */; };
 		F3CF26FE21988F3D00E23A0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3CF26FC21988F3D00E23A0A /* Main.storyboard */; };
@@ -53,6 +55,9 @@
 		765F5C24A0C634DC10D03BCB /* Pods_PoloniexTickerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoloniexTickerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB43CECCDF22B38C2B6AA1E6 /* Pods-PoloniexTicker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoloniexTicker.release.xcconfig"; path = "Pods/Target Support Files/Pods-PoloniexTicker/Pods-PoloniexTicker.release.xcconfig"; sourceTree = "<group>"; };
 		EE8D967B4DBE77DA1C687EB9 /* Pods_PoloniexTickerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoloniexTickerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F34B03162199F342002760AD /* ATNRegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATNRegistrationViewController.swift; sourceTree = "<group>"; };
+		F34B0318219A025B002760AD /* PoloniexTicker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PoloniexTicker.entitlements; sourceTree = "<group>"; };
+		F34B0319219A02CD002760AD /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = System/Library/Frameworks/AuthenticationServices.framework; sourceTree = SDKROOT; };
 		F3CF26F521988F3D00E23A0A /* PoloniexTicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PoloniexTicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3CF26F821988F3D00E23A0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3CF26FA21988F3D00E23A0A /* ATNLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATNLoginViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F34B031A219A02CD002760AD /* AuthenticationServices.framework in Frameworks */,
 				06656A6A4AF403C257E95F08 /* Pods_PoloniexTicker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -106,6 +112,7 @@
 		A9E19999CF48B39C986E5C1B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F34B0319219A02CD002760AD /* AuthenticationServices.framework */,
 				605F2B120358510214A050E8 /* Pods_PoloniexTicker.framework */,
 				EE8D967B4DBE77DA1C687EB9 /* Pods_PoloniexTickerTests.framework */,
 				765F5C24A0C634DC10D03BCB /* Pods_PoloniexTickerUITests.framework */,
@@ -151,6 +158,7 @@
 		F3CF26F721988F3D00E23A0A /* PoloniexTicker */ = {
 			isa = PBXGroup;
 			children = (
+				F34B0318219A025B002760AD /* PoloniexTicker.entitlements */,
 				F3CF27392199D5DF00E23A0A /* Themes */,
 				F3CF27312199C57600E23A0A /* CustomViews */,
 				F3CF272C2198A17300E23A0A /* Model */,
@@ -214,6 +222,7 @@
 			children = (
 				F3CF27372199C5CB00E23A0A /* ATNHomeViewController.swift */,
 				F3CF26FA21988F3D00E23A0A /* ATNLoginViewController.swift */,
+				F34B03162199F342002760AD /* ATNRegistrationViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -303,6 +312,14 @@
 				TargetAttributes = {
 					F3CF26F421988F3D00E23A0A = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.AutoFillCredentialProvider = {
+								enabled = 1;
+							};
+							com.apple.SafariKeychain = {
+								enabled = 1;
+							};
+						};
 					};
 					F3CF270B21988F4100E23A0A = {
 						CreatedOnToolsVersion = 10.1;
@@ -483,10 +500,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-PoloniexTicker/Pods-PoloniexTicker-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/KeychainAccess/KeychainAccess.framework",
 				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainAccess.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -517,6 +536,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3CF270121988F3D00E23A0A /* PoloniexTicker.xcdatamodeld in Sources */,
+				F34B03172199F342002760AD /* ATNRegistrationViewController.swift in Sources */,
 				F3CF273B2199D61000E23A0A /* ATNTheme.swift in Sources */,
 				F3CF26FB21988F3D00E23A0A /* ATNLoginViewController.swift in Sources */,
 				F3CF272E2198A18200E23A0A /* Tick.swift in Sources */,
@@ -700,6 +720,7 @@
 			baseConfigurationReference = 046317D359E6817AE3055D25 /* Pods-PoloniexTicker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PoloniexTicker/PoloniexTicker.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z7T88Q64U2;
 				INFOPLIST_FILE = PoloniexTicker/Info.plist;
@@ -719,6 +740,7 @@
 			baseConfigurationReference = BB43CECCDF22B38C2B6AA1E6 /* Pods-PoloniexTicker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PoloniexTicker/PoloniexTicker.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z7T88Q64U2;
 				INFOPLIST_FILE = PoloniexTicker/Info.plist;
