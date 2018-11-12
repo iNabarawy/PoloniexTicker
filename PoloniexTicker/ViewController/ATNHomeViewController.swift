@@ -21,6 +21,7 @@ class ATNHomeViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
 	@IBOutlet weak var segmentedController: UISegmentedControl!
 	@IBOutlet weak var inputTextField: UITextField!
+	@IBOutlet weak var logOutButton: UIButton!
 	
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +41,9 @@ class ATNHomeViewController: UIViewController {
 		inputTextField.layer.borderWidth = 1
 		inputTextField.layer.cornerRadius = 5
 		
+		logOutButton.setTitleColor(currentTheme?.foregroundColor, for: .normal)
+		logOutButton.tintColor = currentTheme?.backgroundColor
+		
 		view.backgroundColor = currentTheme?.backgroundColor
 	}
 
@@ -53,6 +57,9 @@ class ATNHomeViewController: UIViewController {
 		}
 	}
 	
+	@IBAction func logout(_ sender: Any) {
+		dismiss(animated: true, completion: nil)
+	}
 	deinit {
 		ATNBitPoloniexService.shared.unsubscribe(self)
 	}

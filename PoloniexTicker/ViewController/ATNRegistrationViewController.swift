@@ -17,6 +17,7 @@ class ATNRegistrationViewController: UIViewController {
 	@IBOutlet weak var mobileTextField: UITextField!
 	@IBOutlet weak var passwordTextField: UITextField!
 	@IBOutlet weak var confirmPasswordTextField: UITextField!
+	@IBOutlet weak var scrollView: UIScrollView!
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -57,10 +58,13 @@ class ATNRegistrationViewController: UIViewController {
 		}
 		return false
 	}
+	@IBAction func cancel(_ sender: Any) {
+		dismiss(animated: true, completion: nil)
+	}
+	
 }
 extension ATNRegistrationViewController : UITextFieldDelegate {
 	func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-		
 		if let nextTextField = view.viewWithTag(textField.tag + 1) as? UITextField {
 			nextTextField.becomeFirstResponder()
 		}else{
@@ -68,6 +72,17 @@ extension ATNRegistrationViewController : UITextFieldDelegate {
 			verifyPassword()
 		}
 		return true
+	}
+	func textFieldDidBeginEditing(_ textField: UITextField) {
+		UIView.animate(withDuration: 0.3) {
+			self.scrollView.contentOffset = CGPoint(x:0, y:
+				textField.frame.origin.y/3)
+		}
+	}
+	func textFieldDidEndEditing(_ textField: UITextField) {
+		UIView.animate(withDuration: 0.3) {
+			self.scrollView.contentOffset = CGPoint(x:0, y:0)
+		}
 	}
 }
 
