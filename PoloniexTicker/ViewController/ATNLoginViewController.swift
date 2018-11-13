@@ -8,35 +8,65 @@
 
 import UIKit
 import KeychainAccess
-
+import LocalAuthentication
 class ATNLoginViewController: UIViewController {
-
+	
 	@IBOutlet weak var userNameTextField: UITextField!
 	@IBOutlet weak var passwordTextField: UITextField!
+	var context:LAContext!
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 	}
-
-
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+		self.userNameTextField.text = ""
+		self.passwordTextField.text = ""
+	}
+	
 	@IBAction func touchID(_ sender: Any) {
-		let keychain = Keychain(service: "com.inabarawy.PoloniexTicker").synchronizable(true).accessibility(.whenUnlocked)
-		DispatchQueue.global().async {
-			do {
-				let password = try keychain
-					.authenticationPrompt("Authenticate to login to PoloniexTicker")
-					.get("password")
-				let userName =  try keychain.get("user")
-				DispatchQueue.main.async {
-					self.userNameTextField.text = userName
-					self.passwordTextField.text = password
-					self.authenticated()
+		context = LAContext()
+		
+		context.localizedCancelTitle = "Enter Username/Password"
+		
+		// First check if we have the needed hardware support.
+		var error: NSError?
+		if context.canEvaluatePolicy(.deviceOwnerAuthentication, error: &error) {
+			
+			let reason = "Log in to your account"
+			context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason ) { success, error in
+				if success {
+					// Move to the main thread because a state update triggers UI changes.
+					DispatchQueue.main.async { [unowned self] in
+						let keychain = Keychain(service: "com.inabarawy.PoloniexTicker").synchronizable(true).accessibility(.whenUnlocked)
+						DispatchQueue.global().async {
+							do {
+								let password = try keychain.get("password")
+								let userName =  try keychain.get("user")
+								DispatchQueue.main.async {
+									self.userNameTextField.text = userName
+									self.passwordTextField.text = password
+									self.authenticated()
+								}
+								
+							} catch let error {
+								// Error handling if needed...
+								print("\(error.localizedDescription)")
+							}
+						}
+					}
+					
+				} else {
+					print(error?.localizedDescription ?? "Failed to authenticate")
+					// Fall back to a asking for username and password.
+					DispatchQueue.main.async {
+						self.userNameTextField.becomeFirstResponder()
+					}
 				}
-				
-			} catch let error {
-				// Error handling if needed...
-				print("\(error)")
 			}
+		} else {
+			print(error?.localizedDescription ?? "Can't evaluate policy")
+			self.userNameTextField.becomeFirstResponder()
 		}
 	}
 	@IBAction func login(_ sender: Any) {

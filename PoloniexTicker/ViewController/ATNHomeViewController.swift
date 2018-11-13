@@ -18,7 +18,8 @@ class ATNHomeViewController: UIViewController {
 		}
 	}
 	
-    @IBOutlet weak var tableView: UITableView!
+	@IBOutlet weak var headerView: UIView!
+	@IBOutlet weak var tableView: UITableView!
 	@IBOutlet weak var segmentedController: UISegmentedControl!
 	@IBOutlet weak var inputTextField: UITextField!
 	@IBOutlet weak var logOutButton: UIButton!
@@ -44,7 +45,14 @@ class ATNHomeViewController: UIViewController {
 		logOutButton.setTitleColor(currentTheme?.foregroundColor, for: .normal)
 		logOutButton.tintColor = currentTheme?.backgroundColor
 		
+		tableView.backgroundColor = currentTheme?.backgroundColor
 		view.backgroundColor = currentTheme?.backgroundColor
+		headerView.backgroundColor = currentTheme?.backgroundColor
+		for label in headerView.subviews {
+			if let label = label as? UILabel {
+				label.textColor = currentTheme?.foregroundColor
+			}
+		}
 	}
 
 	@IBAction func switchThemes(_ sender: UISegmentedControl) {
@@ -59,6 +67,9 @@ class ATNHomeViewController: UIViewController {
 	
 	@IBAction func logout(_ sender: Any) {
 		dismiss(animated: true, completion: nil)
+	}
+	fileprivate func updateTickInfo(with tick:Tick){
+	
 	}
 	deinit {
 		ATNBitPoloniexService.shared.unsubscribe(self)
@@ -76,9 +87,12 @@ extension ATNHomeViewController : UITableViewDataSource, UITableViewDelegate {
 		cell?.configure(with: tick, theme: currentTheme)
         return cell!
     }
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 71
-    }
+	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		let tick = Array(ticks.values).sorted{$0.id<$1.id}[indexPath.row]
+		updateTickInfo(with: tick)
+		let cell = tableView.cellForRow(at: indexPath)
+		cell?.isSelected = false
+	}
 }
 
 extension ATNHomeViewController : ATNBitPoloniexServiceObserverProtocol {
