@@ -13,7 +13,8 @@ class ATNTickerTableViewCell: UITableViewCell {
     @IBOutlet weak var lastLabel: UILabel!
     @IBOutlet weak var percentChangeLabel: UILabel!
     @IBOutlet weak var quoteVolumeLabel: UILabel!
-
+	@IBOutlet weak var arrowImageView: UIImageView!
+	
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -24,21 +25,32 @@ class ATNTickerTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-	func configure(with ticker:Tick, theme:ATNTheme?){
+	func configure(with tick:Tick, theme:ATNTheme?, numberToCompare number:Double?){
 		self.backgroundColor = theme?.backgroundColor
 		
-        currencyNameLabel.text = ticker.currency()
+        currencyNameLabel.text = tick.currency()
 		currencyNameLabel.textColor = theme?.foregroundColor
 		
-        lastLabel.text = ticker.last
+        lastLabel.text = tick.last
 		lastLabel.textColor = theme?.foregroundColor
 		
 		
-        percentChangeLabel.text = ticker.percentChange
+        percentChangeLabel.text = tick.percentChange
 		percentChangeLabel.textColor = theme?.foregroundColor
 		
 		
-        quoteVolumeLabel.text = ticker.quoteVolume
+        quoteVolumeLabel.text = tick.quoteVolume
 		quoteVolumeLabel.textColor = theme?.foregroundColor
+		if let anumber = number {
+			if Double(tick.last!) ?? 0 < anumber {
+				arrowImageView.image = UIImage(named: "red")
+			}else if Double(tick.last!) ?? 0 > anumber {
+				arrowImageView.image = UIImage(named: "green")
+			}else{
+				arrowImageView.image = nil
+			}
+		}else {
+			arrowImageView.image = nil
+		}
     }
 }

@@ -17,6 +17,14 @@ class ATNHomeViewController: UIViewController {
 			updateView()
 		}
 	}
+	var comparisonNumber: Double?
+	
+	@IBOutlet weak var hudHeightConstraint: NSLayoutConstraint!
+	@IBOutlet weak var tickInfoHUDView: UIView!
+	@IBOutlet weak var dayChangeLabel: UILabel!
+	@IBOutlet weak var dayHighLabel: UILabel!
+	@IBOutlet weak var dayLowLabel: UILabel!
+	@IBOutlet weak var dayVolume: UILabel!
 	
 	@IBOutlet weak var headerView: UIView!
 	@IBOutlet weak var tableView: UITableView!
@@ -26,9 +34,9 @@ class ATNHomeViewController: UIViewController {
 	
     override func viewDidLoad() {
         super.viewDidLoad()
+		hudHeightConstraint.constant = 0
         ATNBitPoloniexService.shared.subscribe(self)
 		currentTheme = ATNTheme(backgroundColor: UIColor.white,foregroundColor: UIColor.black)
-		
     }
 	
 	fileprivate func updateView() {
@@ -53,6 +61,12 @@ class ATNHomeViewController: UIViewController {
 				label.textColor = currentTheme?.foregroundColor
 			}
 		}
+		tickInfoHUDView.backgroundColor = currentTheme?.backgroundColor
+		for label in tickInfoHUDView.subviews {
+			if let label = label as? UILabel {
+				label.textColor = currentTheme?.foregroundColor
+			}
+		}
 	}
 
 	@IBAction func switchThemes(_ sender: UISegmentedControl) {
@@ -69,8 +83,15 @@ class ATNHomeViewController: UIViewController {
 		dismiss(animated: true, completion: nil)
 	}
 	fileprivate func updateTickInfo(with tick:Tick){
-	
+		UIView.animate(withDuration: 0.3) {
+			self.hudHeightConstraint.constant = 65
+		}
+		dayChangeLabel.text = tick.percentChange
+		dayHighLabel.text = tick.high24hr
+		dayLowLabel.text = tick.low24hr
+		dayVolume.text = tick.baseVolume
 	}
+	
 	deinit {
 		ATNBitPoloniexService.shared.unsubscribe(self)
 	}
@@ -84,14 +105,12 @@ extension ATNHomeViewController : UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as? ATNTickerTableViewCell
 		let tick = Array(ticks.values).sorted{$0.id<$1.id}[indexPath.row]
-		cell?.configure(with: tick, theme: currentTheme)
+		cell?.configure(with: tick, theme: currentTheme, numberToCompare: comparisonNumber)
         return cell!
     }
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		let tick = Array(ticks.values).sorted{$0.id<$1.id}[indexPath.row]
 		updateTickInfo(with: tick)
-		let cell = tableView.cellForRow(at: indexPath)
-		cell?.isSelected = false
 	}
 }
 
@@ -120,12 +139,20 @@ extension ATNHomeViewController : ATNBitPoloniexServiceObserverProtocol {
 			self.tableView.reloadData()
 		}
 	}
-	
 }
 
 extension ATNHomeViewController : UITextFieldDelegate {
+	func updateTradeHighlight(){
+		if let double = Double(inputTextField.text ?? "0"), double != 0 {
+			comparisonNumber = double
+		}else{
+			comparisonNumber = nil
+		}
+		tableView.reloadData()
+	}
 	func textFieldShouldReturn(_ textField: UITextField) -> Bool {
 		textField.resignFirstResponder()
+		updateTradeHighlight()
 		return true
 	}
 }
