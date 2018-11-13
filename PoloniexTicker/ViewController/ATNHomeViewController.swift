@@ -49,7 +49,10 @@ class ATNHomeViewController: UIViewController {
 		inputTextField.layer.borderColor = currentTheme?.foregroundColor?.cgColor
 		inputTextField.layer.borderWidth = 1
 		inputTextField.layer.cornerRadius = 5
-		
+		inputTextField.attributedPlaceholder =
+			NSAttributedString(string: "enter the number here",
+							   attributes: [NSAttributedString.Key.foregroundColor: currentTheme!.foregroundColor!])
+
 		logOutButton.setTitleColor(currentTheme?.foregroundColor, for: .normal)
 		logOutButton.tintColor = currentTheme?.backgroundColor
 		
