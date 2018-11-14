@@ -71,7 +71,7 @@ class ATNLoginViewController: UIViewController {
 	}
 	@IBAction func login(_ sender: Any) {
 		let keychain = Keychain(service: "com.inabarawy.PoloniexTicker").synchronizable(true).accessibility(.whenUnlocked)
-		if keychain["user"] == userNameTextField.text && keychain["password"] == passwordTextField.text {
+		if keychain["user"]?.lowercased() == userNameTextField.text?.lowercased() && keychain["password"] == passwordTextField.text {
 			authenticated()
 		}else{
 			alert(title: "Error!", message: "Wrong username or password!", actionTitle: "Retry", cancelTitle: nil) { (confirmed) in

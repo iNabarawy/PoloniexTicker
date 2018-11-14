@@ -44,11 +44,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PoloniexTicker/ViewController/ATNHomeViewController.swift"
-            timestampString = "563826504.689954"
+            timestampString = "563908652.776933"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "137"
-            endingLineNumber = "137"
+            startingLineNumber = "138"
+            endingLineNumber = "138"
             landmarkName = "receivedUpdates(_:)"
             landmarkType = "7">
          </BreakpointContent>
